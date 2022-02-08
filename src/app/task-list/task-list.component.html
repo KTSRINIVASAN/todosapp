@@ -1,0 +1,14 @@
+<p>task-list works!</p>
+<ng-content ></ng-content>
+
+<input *ngIf="tasks.length" placeholder="search..." type="text" name="taskSearch" class="form-control" id="taskSearch" [(ngModel)]="searchText">
+
+<ul>
+    <li class="d-flex my-3 px-2 py-2" *ngFor="let task of tasks | filterPipe:searchText;let i=index ">
+    {{task}}  
+      <button class="btn btn-outline-danger" (click)="removeTask(i)">Delete</button>
+    </li>
+    
+  </ul>
+  <!-- <p *ngIf="searchText.length  ">No Result</p> -->
+  <!-- <div *ngIf="(let task of tas | filterPipe:searchText).length == 0">no dta</div> -->
