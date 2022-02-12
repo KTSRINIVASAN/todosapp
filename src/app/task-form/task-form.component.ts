@@ -17,7 +17,7 @@ newTask: any;
 
   addtodo(){
 this.tasklist.unshift(this.newTask);
-// localStorage.setItem('my_tasks',JSON.stringify(this.tasklist))
+localStorage.setItem('my_tasks',JSON.stringify(this.tasklist))
 this.newTask='';
   }
 }

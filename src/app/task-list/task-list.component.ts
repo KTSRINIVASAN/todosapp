@@ -14,7 +14,7 @@ searchText:string  = '';
   }
   removeTask(index:number){
   this.tasks.splice(index,1)
-  // localStorage.setItem('my_tasks',JSON.stringify(this.tasks))
+  localStorage.setItem('my_tasks',JSON.stringify(this.tasks))
 
   }
 }
